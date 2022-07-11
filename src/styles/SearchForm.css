@@ -1,0 +1,8 @@
+input, .search-bottom {
+    font-size: 20px;
+}
+
+.search-button {
+    margin-left: 5px;
+    border-radius: 8%;
+}

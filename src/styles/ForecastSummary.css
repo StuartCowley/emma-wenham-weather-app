@@ -1,0 +1,14 @@
+.forecast-summary__icon {
+    font-size: 50px;
+    margin: 15px;
+}
+
+.forecast-summary {
+    line-height: 25px;
+}
+
+.forecast-summary__button {
+    border-radius: 15%;
+    background-color: #eceef1;
+    border-style: hidden;
+}
