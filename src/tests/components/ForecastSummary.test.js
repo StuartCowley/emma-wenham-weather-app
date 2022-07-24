@@ -1,7 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import ForecastSummary from "../../components/ForecastSummary";
-import handleForecastSelect from "../../components/App";
 
 describe("ForecastSummary", () => {
   const validProps = {
@@ -14,15 +13,13 @@ describe("ForecastSummary", () => {
     },
   };
 
-  const onSelect = handleForecastSelect;
-
   it("renders correctly", () => {
     const { asFragment } = render(
       <ForecastSummary
         date={validProps.date}
         description={validProps.description}
         icon={validProps.icon}
-        onSelect={onSelect}
+        onSelect={validProps.onSelect}
         temperature={validProps.temperature}
       />
     );
@@ -36,15 +33,21 @@ describe("ForecastSummary", () => {
         date={validProps.date}
         description={validProps.description}
         icon={validProps.icon}
-        onSelect={onSelect}
+        onSelect={validProps.onSelect}
         temperature={validProps.temperature}
       />
     );
-    expect(getByText(formattedDate)).toHaveClass("forecast-summary__date");
-    expect(getByText("Stub description")).toHaveClass(
+    expect(getByText(formattedDate)).toHaveTextContent(
+      "forecast-summary__date"
+    );
+    expect(getByText("Stub description")).toHaveTextContent(
       "forecast-summary__description"
     );
-    expect(getByTestId("forecast-icon")).toHaveClass("forecast-summary__icon");
-    expect(getByText("22°C")).toHaveClass("forecast-summary__temperature");
+    expect(getByTestId("forecast-icon")).toHaveTextContent(
+      "forecast-summary__icon"
+    );
+    expect(getByText("22°C")).toHaveTextContent(
+      "forecast-summary__temperature"
+    );
   });
 });
