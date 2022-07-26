@@ -16,10 +16,15 @@ To install code dependencies - `npm install`
 To start the app in browser - `npm start`
 To test app - `npm test`
 
+## DEPENDENCIES
+
+- React
+- Axios
+- Prop-types
+- React-icons-weather
+
 ## DEV DEPENDENCIES
 
-- Airbnb (used as a style guide)
-- Import
-- JSX-ally
-- React
-- React hooks
+- eslint-config-airbnb
+- eslint-config-prettier
+- prettier

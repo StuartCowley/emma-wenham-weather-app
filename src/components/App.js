@@ -32,9 +32,14 @@ function App() {
   };
 
   useEffect(() => {
-    setErrorMessage("");
-    getForecast(setSelectedDate, setForecasts, setLocation, setErrorMessage);
-  }, [location]);
+    getForecast(
+      searchText,
+      setSelectedDate,
+      setForecasts,
+      setLocation,
+      setErrorMessage
+    );
+  }, [location, searchText]);
 
   return (
     <div className="weather-app">
