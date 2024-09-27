@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Forecast Summaries renders correctly`] = `
+<DocumentFragment>
+    <div
+      class="search-form"
+    >
+      <label
+        for="search"
+        >
+        <input
+           placeholder="Search City"
+           type="text"
+           value=""
+           />
+        </label>
+    <button
+       type="submit"
+         >
+         Search
+        </button> 
+    </div>        
+</DocumentFragment>
+`;
